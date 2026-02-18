@@ -1,3 +1,11 @@
+![eVATR PHP](.github/img/header.png)
+
+[![Tests](https://github.com/xentral/evatr-php/actions/workflows/tests.yml/badge.svg)](https://github.com/xentral/evatr-php/actions/workflows/tests.yml)
+[![codecov](https://codecov.io/gh/xentral/evatr-php/graph/badge.svg)](https://codecov.io/gh/xentral/evatr-php)
+[![Latest Stable Version](https://poser.pugx.org/xentral/evatr-php/v)](https://packagist.org/packages/xentral/evatr-php)
+[![Total Downloads](https://poser.pugx.org/xentral/evatr-php/downloads)](https://packagist.org/packages/xentral/evatr-php)
+[![License](https://poser.pugx.org/xentral/evatr-php/license)](https://packagist.org/packages/xentral/evatr-php)
+
 # eVATR PHP
 
 PHP SDK for the German BZSt eVATR API — verify EU VAT identification numbers.
