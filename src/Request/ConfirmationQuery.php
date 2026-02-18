@@ -13,8 +13,7 @@ final class ConfirmationQuery
         public readonly ?string $city = null,
         public readonly ?string $street = null,
         public readonly ?string $postalCode = null,
-    ) {
-    }
+    ) {}
 
     public static function simple(string $ownVatId, string $foreignVatId): self
     {

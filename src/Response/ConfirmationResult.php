@@ -23,8 +23,7 @@ final class ConfirmationResult
         public readonly ?ComparisonResult $streetResult = null,
         public readonly ?ComparisonResult $postalCodeResult = null,
         public readonly ?ComparisonResult $cityResult = null,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, mixed> $data

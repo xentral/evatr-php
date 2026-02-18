@@ -10,8 +10,7 @@ final class MemberState
         public readonly string $countryCode,
         public readonly string $name,
         public readonly bool $available,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, mixed> $data

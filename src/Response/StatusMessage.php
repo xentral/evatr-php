@@ -12,8 +12,7 @@ final class StatusMessage
         public readonly int $httpCode,
         public readonly string $message,
         public readonly ?string $field = null,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, mixed> $data

@@ -11,6 +11,8 @@ composer require xentral/evatr-php
 ## Usage
 
 ```php
+<?php
+
 use Xentral\EvatrPhp\EvatrClient;
 use Xentral\EvatrPhp\Request\ConfirmationQuery;
 
@@ -39,3 +41,4 @@ The MIT License (MIT). Please see [License File](LICENSE) for more information.
 ## Credits
 
 - [Sanan Guliyev](https://github.com/sananguliyev)
+- All contributors who have helped improve this package
