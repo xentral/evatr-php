@@ -1,0 +1,23 @@
+{
+    "name": "xentral/evatr-php",
+    "description": "PHP SDK for the German BZSt eVATR API - EU VAT ID verification",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xentral\\EvatrPhp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Xentral\\EvatrPhp\\Tests\\": "tests/"
+        }
+    }
+}
