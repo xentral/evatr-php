@@ -40,18 +40,10 @@ final class ConfirmationResult
             street: $data['ergStrasse'] ?? null,
             postalCode: $data['ergPlz'] ?? null,
             city: $data['ergOrt'] ?? null,
-            companyNameResult: isset($data['ergFirmennameResult'])
-            ? ComparisonResult::from($data['ergFirmennameResult'])
-            : (isset($data['ergFirmenname']) ? ComparisonResult::tryFrom($data['ergFirmenname']) : null),
-            streetResult: isset($data['ergStrasseResult'])
-            ? ComparisonResult::from($data['ergStrasseResult'])
-            : (isset($data['ergStrasse']) ? ComparisonResult::tryFrom($data['ergStrasse']) : null),
-            postalCodeResult: isset($data['ergPlzResult'])
-            ? ComparisonResult::from($data['ergPlzResult'])
-            : (isset($data['ergPlz']) ? ComparisonResult::tryFrom($data['ergPlz']) : null),
-            cityResult: isset($data['ergOrtResult'])
-            ? ComparisonResult::from($data['ergOrtResult'])
-            : (isset($data['ergOrt']) ? ComparisonResult::tryFrom($data['ergOrt']) : null),
+            companyNameResult: isset($data['ergFirmenname']) ? ComparisonResult::tryFrom($data['ergFirmenname']) : null,
+            streetResult: isset($data['ergStrasse']) ? ComparisonResult::tryFrom($data['ergStrasse']) : null,
+            postalCodeResult: isset($data['ergPlz']) ? ComparisonResult::tryFrom($data['ergPlz']) : null,
+            cityResult: isset($data['ergOrt']) ? ComparisonResult::tryFrom($data['ergOrt']) : null,
         );
     }
 
