@@ -58,14 +58,10 @@ final class EvatrClientTest extends TestCase
             new Response(200, ['Content-Type' => 'application/json'], json_encode([
                 'status' => 'evatr-0000',
                 'anfrageZeitpunkt' => '2026-02-17T10:00:00Z',
-                'ergFirmenname' => 'Test GmbH',
-                'ergOrt' => 'Berlin',
-                'ergStrasse' => 'Teststr. 1',
-                'ergPlz' => '10115',
-                'ergFirmennameResult' => 'A',
-                'ergOrtResult' => 'A',
-                'ergStrasseResult' => 'B',
-                'ergPlzResult' => 'C',
+                'ergFirmenname' => 'A',
+                'ergOrt' => 'A',
+                'ergStrasse' => 'B',
+                'ergPlz' => 'C',
             ])),
         ]);
 
@@ -81,11 +77,10 @@ final class EvatrClientTest extends TestCase
         $result = $client->verifyVatId($query);
 
         $this->assertSame(StatusCode::VALID, $result->status);
-        $this->assertSame('Test GmbH', $result->companyName);
-        $this->assertSame(ComparisonResult::MATCH, $result->companyNameResult);
-        $this->assertSame(ComparisonResult::MATCH, $result->cityResult);
-        $this->assertSame(ComparisonResult::MISMATCH, $result->streetResult);
-        $this->assertSame(ComparisonResult::NOT_REQUESTED, $result->postalCodeResult);
+        $this->assertSame(ComparisonResult::MATCH, $result->companyName);
+        $this->assertSame(ComparisonResult::MATCH, $result->city);
+        $this->assertSame(ComparisonResult::MISMATCH, $result->street);
+        $this->assertSame(ComparisonResult::NOT_REQUESTED, $result->postalCode);
     }
 
     public function testInvalidVatIdReturnsNonValidResult(): void

@@ -15,14 +15,10 @@ final class ConfirmationResult
         public readonly ?string $id = null,
         public readonly ?string $validFrom = null,
         public readonly ?string $validUntil = null,
-        public readonly ?string $companyName = null,
-        public readonly ?string $street = null,
-        public readonly ?string $postalCode = null,
-        public readonly ?string $city = null,
-        public readonly ?ComparisonResult $companyNameResult = null,
-        public readonly ?ComparisonResult $streetResult = null,
-        public readonly ?ComparisonResult $postalCodeResult = null,
-        public readonly ?ComparisonResult $cityResult = null,
+        public readonly ?ComparisonResult $companyName = null,
+        public readonly ?ComparisonResult $street = null,
+        public readonly ?ComparisonResult $postalCode = null,
+        public readonly ?ComparisonResult $city = null,
     ) {}
 
     /**
@@ -36,14 +32,10 @@ final class ConfirmationResult
             id: $data['id'] ?? null,
             validFrom: $data['gueltigAb'] ?? null,
             validUntil: $data['gueltigBis'] ?? null,
-            companyName: $data['ergFirmenname'] ?? null,
-            street: $data['ergStrasse'] ?? null,
-            postalCode: $data['ergPlz'] ?? null,
-            city: $data['ergOrt'] ?? null,
-            companyNameResult: isset($data['ergFirmennameResult']) ? ComparisonResult::from($data['ergFirmennameResult']) : null,
-            streetResult: isset($data['ergStrasseResult']) ? ComparisonResult::from($data['ergStrasseResult']) : null,
-            postalCodeResult: isset($data['ergPlzResult']) ? ComparisonResult::from($data['ergPlzResult']) : null,
-            cityResult: isset($data['ergOrtResult']) ? ComparisonResult::from($data['ergOrtResult']) : null,
+            companyName: isset($data['ergFirmenname']) ? ComparisonResult::tryFrom($data['ergFirmenname']) : null,
+            street: isset($data['ergStrasse']) ? ComparisonResult::tryFrom($data['ergStrasse']) : null,
+            postalCode: isset($data['ergPlz']) ? ComparisonResult::tryFrom($data['ergPlz']) : null,
+            city: isset($data['ergOrt']) ? ComparisonResult::tryFrom($data['ergOrt']) : null,
         );
     }
 
